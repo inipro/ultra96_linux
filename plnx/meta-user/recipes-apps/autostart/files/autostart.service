@@ -1,0 +1,11 @@
+[Unit]
+Description=autostart
+Requires=fw-autoload.service
+After=fw-autoload.service
+
+[Service]
+ExecStart=/usr/bin/autostart.sh
+StandardOutput=journal+console
+
+[Install]
+WantedBy=multi-user.target
